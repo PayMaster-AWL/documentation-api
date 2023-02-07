@@ -11,9 +11,9 @@ import (
 
 func main() {
 
-	url := "https://bsc.assetux.com/api/v4/payment/create"
+	url := "https://st06.payout-master.com/api/v4/payment/create"
 
-	payload := strings.NewReader("{\n  \"amountIn\": 500,\n  \"currency\": \"KZT\",\n  \"paymentMethod\": \"VISAMASTER\",\n  \"email\": \"support@assetux.com\",\n  \"lang\": \"en\"\n}")
+	payload := strings.NewReader("{\n  \"amountIn\": 500,\n  \"currency\": \"KZT\",\n  \"paymentMethod\": \"VISAMASTER\",\n  \"email\": \"support@info.com\",\n  \"lang\": \"en\"\n}")
 
 	req, _ := http.NewRequest("POST", url, payload)
 
@@ -37,13 +37,13 @@ const axios = require("axios").default;
 
 const options = {
   method: 'POST',
-  url: 'https://bsc.assetux.com/api/v4/payment/create',
+  url: 'https://st06.payout-master.com/api/v4/payment/create',
   headers: {'assetux-v4-token': 'RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni', 'Content-Type': 'application/json'},
   data: {
     amountIn: 20,
     currency: 'USD',
     paymentMethod: 'VISAMASTER',
-    email: 'support@assetux.com',
+    email: 'support@info.com',
     lang: 'en'
   }
 };
@@ -61,13 +61,13 @@ axios.request(options)
 ```python
 import requests
 
-url = "https://bsc.assetux.com/api/v4/payment/create"
+url = "https://st06.payout-master.com/api/v4/payment/create"
 
 payload = {
     "amountIn": 20,
     "currency": "USD",
     "paymentMethod": "VISAMASTER",
-    "email": "support@assetux.com",
+    "email": "support@info.com",
     "lang": "en"
 }
 headers = {
@@ -82,10 +82,10 @@ print(response.text)
 
 ## curl
 ```curl
-curl -XPOST 'https://bsc.assetux.com/api/v4/payment/create' \
+curl -XPOST 'https://st06.payout-master.com/api/v4/payment/create' \
      -H 'assetux-v4-token: RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni' \
      -H 'Content-Type: application/json' \
-     -d '{"amountIn":20,"currency":"USD","paymentMethod":"VISAMASTER","email":"support@assetux.com","lang":"en"}' \
+     -d '{"amountIn":20,"currency":"USD","paymentMethod":"VISAMASTER","email":"support@info.com","lang":"en"}' \
      --compressed
 ```
 
@@ -95,14 +95,14 @@ curl -XPOST 'https://bsc.assetux.com/api/v4/payment/create' \
 POST /api/v4/payment/create HTTP/1.1
 Assetux-V4-Token: RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni
 Content-Type: application/json
-Host: https://bsc.assetux.com
+Host: https://st06.payout-master.com
 Content-Length: 150
 
 {
   "amountIn": 20,
   "currency": "USD",
   "paymentMethod": "QIWIVISAMASTER",
-  "email": "support@assetux.com",
+  "email": "support@info.com",
   "lang": "en"
 }
 ```
