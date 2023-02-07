@@ -17,7 +17,7 @@
 
 | Name            | Required | Description
 |-----------------|----------|-----------------
-| assetux-v4-token | √        | Token
+| pay-v4-token | √        | Token
 | Content-Type    | √        | application/json
 
 
