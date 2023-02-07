@@ -17,7 +17,7 @@ func main() {
 
 	req, _ := http.NewRequest("POST", url, payload)
 
-	req.Header.Add("assetux-v4-token", "RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni")
+	req.Header.Add("PAYOUT-V4-TOKEN", "RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni")
 	req.Header.Add("Content-Type", "application/json")
 
 	res, _ := http.DefaultClient.Do(req)
@@ -38,7 +38,7 @@ const axios = require("axios").default;
 const options = {
   method: 'POST',
   url: 'https://st06.payout-master.com/api/v4/payment/create',
-  headers: {'assetux-v4-token': 'RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni', 'Content-Type': 'application/json'},
+  headers: {'PAYOUT-V4-TOKEN': 'RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni', 'Content-Type': 'application/json'},
   data: {
     amountIn: 20,
     currency: 'USD',
@@ -71,7 +71,7 @@ payload = {
     "lang": "en"
 }
 headers = {
-    "assetux-v4-token": "RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni",
+    "PAYOUT-V4-TOKEN": "RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni",
     "Content-Type": "application/json"
 }
 
@@ -83,7 +83,7 @@ print(response.text)
 ## curl
 ```curl
 curl -XPOST 'https://st06.payout-master.com/api/v4/payment/create' \
-     -H 'assetux-v4-token: RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni' \
+     -H 'PAYOUT-V4-TOKEN: RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni' \
      -H 'Content-Type: application/json' \
      -d '{"amountIn":20,"currency":"USD","paymentMethod":"VISAMASTER","email":"support@info.com","lang":"en"}' \
      --compressed
@@ -93,7 +93,7 @@ curl -XPOST 'https://st06.payout-master.com/api/v4/payment/create' \
 ## HTTP
 ```http
 POST /api/v4/payment/create HTTP/1.1
-Assetux-V4-Token: RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni
+PAYOUT-V4-TOKEN: RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni
 Content-Type: application/json
 Host: https://st06.payout-master.com
 Content-Length: 150
