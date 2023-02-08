@@ -13,7 +13,7 @@ func main() {
 
 	url := "https://st06.payout-master.com/api/v4/payment/create"
 
-	payload := strings.NewReader("{\n  \"amountIn\": 500,\n  \"currency\": \"KZT\",\n  \"paymentMethod\": \"VISAMASTER\",\n  \"email\": \"support@info.com\",\n  \"lang\": \"en\"\n}")
+	payload := strings.NewReader("{\n  \"amountIn\": 500,\n  \"currency\": \"KZT\",\n  \"paymentMethod\": \"VISAMASTER\",\n  \"email\": \"support@info.com\",\n  \"lang\": \"en\",\n \"txnId\": \"en\"\n}")
 
 	req, _ := http.NewRequest("POST", url, payload)
 
@@ -45,7 +45,7 @@ const options = {
     paymentMethod: 'VISAMASTER',
     email: 'support@info.com',
     lang: 'en',
-    txnInd: '123'
+    txnId: '123'
   }
 };
 
