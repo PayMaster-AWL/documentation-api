@@ -13,7 +13,7 @@ func main() {
 
 	url := "https://st06.payout-master.com/api/v4/payment/create"
 
-	payload := strings.NewReader("{\n  \"amountIn\": 500,\n  \"currency\": \"KZT\",\n  \"paymentMethod\": \"VISAMASTER\",\n  \"email\": \"support@info.com\",\n  \"lang\": \"en\",\n \"txnId\": \"en\"\n}")
+	payload := strings.NewReader("{\n  \"amountIn\": 500,\n  \"currency\": \"KZT\",\n  \"paymentMethod\": \"VISAMASTER\",\n  \"email\": \"support@info.com\",\n  \"lang\": \"en\",\n \"txnId\": \"123\"\n}")
 
 	req, _ := http.NewRequest("POST", url, payload)
 
@@ -69,7 +69,8 @@ payload = {
     "currency": "USD",
     "paymentMethod": "VISAMASTER",
     "email": "support@info.com",
-    "lang": "en"
+    "lang": "en",
+    "txnId": "123"
 }
 headers = {
     "PAYOUT-V4-TOKEN": "RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni",
@@ -86,7 +87,7 @@ print(response.text)
 curl -XPOST 'https://st06.payout-master.com/api/v4/payment/create' \
      -H 'PAYOUT-V4-TOKEN: RYXwLOxxkKIYb165ZPEebSmJhO6RP1ni' \
      -H 'Content-Type: application/json' \
-     -d '{"amountIn":20,"currency":"USD","paymentMethod":"VISAMASTER","email":"support@info.com","lang":"en"}' \
+     -d '{"amountIn":20,"currency":"USD","paymentMethod":"VISAMASTER","email":"support@info.com","lang":"en","txnId":"123"}' \
      --compressed
 ```
 
@@ -104,6 +105,7 @@ Content-Length: 150
   "currency": "USD",
   "paymentMethod": "QIWIVISAMASTER",
   "email": "support@info.com",
-  "lang": "en"
+  "lang": "en",
+  "txnId": "123"
 }
 ```
