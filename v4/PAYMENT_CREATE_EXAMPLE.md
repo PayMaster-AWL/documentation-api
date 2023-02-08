@@ -44,7 +44,8 @@ const options = {
     currency: 'USD',
     paymentMethod: 'VISAMASTER',
     email: 'support@info.com',
-    lang: 'en'
+    lang: 'en',
+    txnInd: '123'
   }
 };
 
