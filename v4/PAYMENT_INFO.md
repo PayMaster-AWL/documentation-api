@@ -28,7 +28,10 @@ Supported language:
 * en
 
 ## Phone
-Supported format: 79999999999
-If you send the phone 79662002724, then your phone will look like +79662002724
+Phone is not a required field.
 
-If you enter a phone number starting with +, then your phone field will be invalidated
+Supported format: 79999999999.
+
+If you send the phone 79662002724, then your phone will look like +79662002724.
+
+If you enter a phone number starting with +, then your phone field will be invalidated.
