@@ -4,6 +4,7 @@
 - [EmailConfig](PAYMENT_INFO.md#email-config)
 - [Lang](PAYMENT_INFO.md#language)
 - [Status code](PAYMENT_INFO.md#status-code)
+- [Phone](PAYMENT_INFO.md#phone)
 
 ## Create payment
  - Request Method: POST
@@ -35,7 +36,8 @@
     "emailConfig"?: EmailConfig,
     "email": string,
     "txnId": string,
-    "lang": string
+    "lang": string,
+    "phone"?: string
 }
 ```
 
